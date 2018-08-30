@@ -7,6 +7,7 @@ const PersonaController = {
             } else {
                 let data = {
                         title: 'Lista de Personas',
+                        fecha: new Date().getFullYear(),
                         personas
                     }
                     // console.log(data.personas);
@@ -29,6 +30,7 @@ const PersonaController = {
                     persona[0].mes = mes;
                     let data = {
                         title: 'Editar Persona',
+                        fecha: new Date().getFullYear(),
                         persona
                     };
                     res.render('edit', data);
@@ -38,7 +40,8 @@ const PersonaController = {
     },
     insert: (req, res, next) => {
         let data = {
-            title: 'Agregar Persona'
+            title: 'Agregar Persona',
+            fecha: new Date().getFullYear(),
         };
         res.render('insert', data);
     },

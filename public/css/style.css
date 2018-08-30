@@ -1,0 +1,133 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    width: 90%;
+    height: 100px;
+    background-color: rgb(44, 62, 80);
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    margin: 0 auto;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+.sin-datos {
+    width: 300px;
+    border: 1px solid #f30000;
+    color: #f30000;
+}
+
+.btn {
+    padding: 5px 10px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 2px 2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn-add {
+    background-color: #27ae60;
+}
+
+.btn-edit {
+    background-color: #3498db;
+}
+
+.btn-delete {
+    background-color: #c0392b;
+}
+
+.content-table {
+    overflow-x: scroll;
+    width: 80%;
+    margin: 0 auto;
+}
+
+table {
+    width: 960px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table thead {
+    background-color: #2c3e50;
+    color: white;
+}
+
+table thead tr th {
+    padding: 15px;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: rgba(52, 73, 94, 0.5);
+}
+
+table tbody tr td {
+    padding: 5px;
+}
+
+
+/* INSERT */
+
+form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+form div {
+    padding: 5px;
+}
+
+form div input:not(.btn) {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-color: rgba(0, 0, 0, .2);
+    margin: 5px 0px;
+}
+
+form div input:not(.btn):focus {
+    border-color: transparent;
+}
+
+form input[type="submit"] {
+    width: 120px;
+    height: 35px;
+}
+
+footer {
+    width: 90%;
+    height: 70px;
+    background-color: rgb(44, 62, 80);
+    color: white;
+    font-size: 16px;
+    line-height: 50px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}

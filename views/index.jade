@@ -5,7 +5,7 @@ block content
         div(class="sin-datos") No hay datos 
             a(href="/agregar" class="btn btn-add") Agregar
     -else
-        div
+        div(class="content-table")
             table
                 thead
                     tr
@@ -14,7 +14,7 @@ block content
                         th Dirección
                         th Fecha de Nacimiento
                         th Email
-                        th
+                        th(colspan="3")
                             a(href="/agregar" class="btn btn-add") Agregar Persona
                 tbody
                     -each persona in personas
@@ -22,10 +22,11 @@ block content
                             td= persona.nombre
                             td= persona.apellidos
                             td= persona.direccion
-                            td= persona.fNacimiento.getDate()+'-'+persona.fNacimiento.getMonth()+'-'+persona.fNacimiento.getFullYear()
+                            td= persona.fNacimiento.getDate()+'/'+persona.fNacimiento.getMonth()+'/'+persona.fNacimiento.getFullYear()
                             td= persona.email
                             td
                                 a(href="/editar/#{persona.idPersona}" class="btn btn-edit") Editar
+                            td
                                 form(action="/eliminar/#{persona.idPersona}" method="post" class="form-delete")
                                     input(type="hidden", name="_method" value="delete")
                                     button(type="submit" onclick="eliminar(event,this)" class="btn btn-delete") Eliminar
