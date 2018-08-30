@@ -1,26 +1,26 @@
 {
-  "name": "crud-mysql",
-  "version": "0.0.1",
-  "description": "Aplición CRUD sencilla usando NODE,EXPRESS,MYSQL Y JADE",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "keywords": [
-    "NODE",
-    "CRUD",
-    "MYSQL",
-    "EXPRESS",
-    "JADE"
-  ],
-  "author": "Walter Almestar",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "express-method-override": "0.0.3",
-    "jade": "^1.11.0",
-    "mysql": "^2.16.0"
-  }
+    "name": "crud-mysql",
+    "version": "0.0.1",
+    "description": "Aplición CRUD sencilla usando NODE,EXPRESS,MYSQL Y JADE",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "keywords": [
+        "NODE",
+        "CRUD",
+        "MYSQL",
+        "EXPRESS",
+        "JADE"
+    ],
+    "author": "Walter Almestar",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "express": "^4.16.3",
+        "express-method-override": "0.0.3",
+        "jade": "^1.11.0",
+        "mysql": "^2.16.0"
+    }
 }
