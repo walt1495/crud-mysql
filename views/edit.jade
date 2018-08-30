@@ -1,0 +1,22 @@
+extend layout
+block content
+    h1 Editar Persona
+    form(method="post")
+        input(type="hidden", name="_method" value="put")
+        div
+            label(for="txtNombre") Nombre:
+            input(name="txtNombre", type="text", placeholder="Ingrese Nombre" value="#{persona[0].nombre}")
+        div
+            label(for="txtApellidos") Apellidos:
+            input(name="txtApellidos", type="text", placeholder="Ingrese Apellidos" value="#{persona[0].apellidos}")
+        div
+            label(for="txtDireccion") Dirección:
+            input(name="txtDireccion", type="text", placeholder="Ingrese Direccion" value="#{persona[0].direccion}")
+        div
+            label(for="txtNacimiento") Fecha Nacimiento:
+            input(name="txtNacimiento", type="date" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" value="#{persona[0].fNacimiento.getFullYear()}-#{persona[0].mes}-#{persona[0].fNacimiento.getDate()}")
+        div
+            label(for="txtEmail") Email:
+            input(name="txtEmail", type="email", placeholder="Ingrese Email" value="#{persona[0].email}")
+        div
+            input(class="btn btn-add", type="submit", value="Editar")

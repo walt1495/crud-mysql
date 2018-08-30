@@ -1,0 +1,21 @@
+extend layout
+block content
+    h1 Agregar Persona
+    form(method="post")
+        div
+            label(for="txtNombre") Nombre:
+            input(type="text", name="txtNombre" placeholder="Ingrese Nombre")
+        div
+            label(for="txtApellidos") Apellidos:
+            input(name="txtApellidos", type="text", placeholder="Ingrese Apellidos")
+        div
+            label(for="txtDireccion") Dirección:
+            input(name="txtDireccion", type="text", placeholder="Ingrese Direccion")
+        div
+            label(for="txtNacimiento") Fecha Nacimiento:
+            input(name="txtNacimiento", type="text")
+        div
+            label(for="txtEmail") Email:
+            input(name="txtEmail", type="email", placeholder="Ingrese Email")
+        div
+            input(type="submit", value="Agregar" class="btn btn-add")

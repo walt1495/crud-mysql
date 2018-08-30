@@ -1,0 +1,37 @@
+extend layout.jade
+block content
+    h1 Lista de Poductos
+    -if (personas.length <= 0)
+        div(class="sin-datos") No hay datos 
+            a(href="/agregar" class="btn btn-add") Agregar
+    -else
+        div
+            table
+                thead
+                    tr
+                        th Nombre
+                        th Apellidos
+                        th Dirección
+                        th Fecha de Nacimiento
+                        th Email
+                        th
+                            a(href="/agregar" class="btn btn-add") Agregar Persona
+                tbody
+                    -each persona in personas
+                        tr
+                            td= persona.nombre
+                            td= persona.apellidos
+                            td= persona.direccion
+                            td= persona.fNacimiento.getDate()+'-'+persona.fNacimiento.getMonth()+'-'+persona.fNacimiento.getFullYear()
+                            td= persona.email
+                            td
+                                a(href="/editar/#{persona.idPersona}" class="btn btn-edit") Editar
+                                form(action="/eliminar/#{persona.idPersona}" method="post" class="form-delete")
+                                    input(type="hidden", name="_method" value="delete")
+                                    button(type="submit" onclick="eliminar(event,this)" class="btn btn-delete") Eliminar
+            script.
+                function eliminar(event,input){
+                    event.preventDefault();
+                    var res = confirm('¿Estas seguro de eliminar esta persona?');
+                    if(res) input.parentNode.submit();
+                }
