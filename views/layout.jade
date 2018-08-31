@@ -6,8 +6,19 @@ html(lang="es")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title= title
         link(rel="stylesheet", href="/css/style.css")
+        script.
+            function disable(event){
+                event.preventDefault();
+            }
     body
         header SISTEMA CRUD CON NODE.JS Y MYSQL
         main
+            ul
+                -each pagina in paginas
+                    li
+                        -if (pagina.enable)
+                            a(href="#{pagina.link}")= pagina.text
+                        -else
+                            a(href="#{pagina.link}" onclick="disable(event)" class="disable")= pagina.text
             block content
         footer &copy;#{fecha} Walter Almestar

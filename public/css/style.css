@@ -28,7 +28,7 @@ a {
 
 h1 {
     text-align: center;
-    margin: 20px;
+    color: #636e72;
 }
 
 .sin-datos {
@@ -68,6 +68,46 @@ h1 {
     width: 80%;
     margin: 0 auto;
 }
+
+.disable {
+    cursor: default;
+    color: rgba(0, 0, 0, .4);
+}
+
+.disable:hover {
+    opacity: 1;
+}
+
+
+/* ENLACES */
+
+ul {
+    margin-top: 20px;
+}
+
+ul li {
+    list-style: none;
+    display: inline;
+    margin: 0px 5px;
+    color: #74b9ff;
+}
+
+ul li:before {
+    content: "/";
+    margin-right: 10px;
+    opacity: 0.5;
+}
+
+ul li a {
+    color: #74b9ff;
+}
+
+ul li a:hover {
+    opacity: 0.75;
+}
+
+
+/*TABLE*/
 
 table {
     width: 960px;

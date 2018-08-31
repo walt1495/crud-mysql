@@ -7,10 +7,15 @@ const PersonaController = {
             } else {
                 let data = {
                         title: 'Lista de Personas',
+                        paginas: [{
+                            enlace: '/',
+                            text: 'Inicio',
+                            enable: false
+                        }],
                         fecha: new Date().getFullYear(),
                         personas
                     }
-                    // console.log(data.personas);
+                    // console.log(data.paginas.enlace);
                 res.render('index', data);
             }
         });
@@ -30,9 +35,21 @@ const PersonaController = {
                     persona[0].mes = mes;
                     let data = {
                         title: 'Editar Persona',
+                        paginas: [{
+                                link: '/',
+                                text: 'Inicio',
+                                enable: true
+                            },
+                            {
+                                link: `/editar/${req.params.id}`,
+                                text: 'Editar',
+                                enable: false
+                            }
+                        ],
                         fecha: new Date().getFullYear(),
                         persona
                     };
+                    // console.log(req.query);
                     res.render('edit', data);
                 }
             }
@@ -41,6 +58,17 @@ const PersonaController = {
     insert: (req, res, next) => {
         let data = {
             title: 'Agregar Persona',
+            paginas: [{
+                    link: '/',
+                    text: 'Inicio',
+                    enable: true
+                },
+                {
+                    link: '/agregar',
+                    text: 'Agregar',
+                    enable: false
+                }
+            ],
             fecha: new Date().getFullYear(),
         };
         res.render('insert', data);
